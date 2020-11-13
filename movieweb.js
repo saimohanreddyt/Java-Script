@@ -1,5 +1,4 @@
 
-
 const API_KEY = '50be2f92df13cf8c9b0607ecf5db2ae8';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
