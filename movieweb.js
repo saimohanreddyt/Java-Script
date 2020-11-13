@@ -1,4 +1,5 @@
 
+
 const API_KEY = '50be2f92df13cf8c9b0607ecf5db2ae8';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -16,7 +17,7 @@ const movieSearchable = document.querySelector('#movies-searchable');
 function moviesSection(movies){
     return movies.map((movie) => {
         return `
-        <img src=${IMAGE_URL+movie.poster_path}vdata-movie-id=${movie.id}/> 
+        <img src=${IMAGE_URL + movie.poster_path} data-movie-id=${movie.id}/> 
         `;
     })
 }
