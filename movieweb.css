@@ -10,8 +10,9 @@
     justify-content:space-between;
 	margin-left:100px;
 	margin-right:100px;
-	margin-top:10px;
+	margin-top:20px;
     margin-bottom:10px;
+    background-color: gray;
     color:rgb(145, 133, 133);
 }
 .container a{
@@ -28,6 +29,7 @@
 
 section {
     position: relative;
+    background-color:gray;
     width: 100%;
     margin-top: 25px;
     display: flex;
@@ -228,8 +230,8 @@ body{
   position: absolute;
   height: 40px;
   width: 40px;
-  background-color: #444444;
-  border-radius: 50%;
+  background-color: black;
+  border-box: 50%;
   color:#ffffff;
   font-size: 20px;
   top:50%;
@@ -241,7 +243,7 @@ body{
 }
 .slider .left-slide:hover,.slider .right-slide:hover{
  box-shadow: 0px 0px 10px black;
- background-color:gray;
+ background-color:yellow;
 }
 
 .slider .left-slide{
@@ -301,7 +303,7 @@ font-size: 30px;
 }
 #ft img{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 0px;
     widows: 15em;
     height:20em;
@@ -316,7 +318,7 @@ font-size: 30px;
 }
 #wt img{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 0px;
     widows: 15em;
     height:20em;
@@ -329,15 +331,13 @@ font-size: 30px;
 
 }
 .fyw {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
     margin-left: 500px;
     margin-right: 500px;
     margin-top: 40px;
     margin-bottom:40px;
-   
 }
+
 .si a{
     background:rgb(231, 231, 8);
     color:black;
@@ -353,8 +353,10 @@ font-size: 30px;
     margin-right: 100px;
 }
 .ff img{
+    display: flex;
+    float: right;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 0px;
     widows: 15em;
     height:20em;
@@ -372,18 +374,21 @@ font-size: 30px;
     margin-bottom:20px;
 }*/
 #it{
-    margin-left:5px;
+    margin-left:100px;
+    margin-top: 30px;
     color:yellow;
 }
 .it{
+    display: flex;
     margin-left:100px;
     margin-right: 100px;
 }
 .it img{
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border-radius: 100%;
     padding: 0px;
-    widows: 15em;
+    width: 15em;
     height:20em;
 }
 
