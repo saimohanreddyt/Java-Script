@@ -29,9 +29,6 @@ function createMovieContainer(movies){
     <section class="section">
         ${moviesSection(movies)}
     </section>
-    <div class="content">
-        <p id="content-close">X</p>
-    </div>
     `;
     movieElement.innerHTML = movieTemplate;
     return movieElement;
