@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="movieweb.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
 <header>
 <div class="container">
   <span><h1 class="logo">IMDb</h1></span>
     <div class="menubar">
+      <a href="#hamburger-icon" onclick="gfgMenu()"> 
+        <i class="fa fa-bars">MENU</i>
+    </a>
 	<select>
 	  <option><a href="#">Movies</a></option>
       <option><a href="#">TV Shows</a></option>
@@ -25,8 +29,7 @@
 <form>
   <div class="form-group">
     <input type="text" class="form-control" id="inputvalue"  placeholder="Search a movies"/>
-  </div>
- <button type="submit" class="btn" id="search">Search a movie</button>
+ <button type="submit" class="btn" id="search">Search a movie</button></div>
 </form>
 <div id="movies-searchable">
     <!--  <div class=movie">
@@ -40,7 +43,9 @@
 	 <div class="watch">
       <a href="#">Watchlist</a>
   </div>
+  <div class="signIn">
  <a href="#">SignIn</a> 	  
+</div>
 </div>
 <div class="img1" id="img11">
     <a href="https://www.amazon.co.uk/gp/video/detail/B07YLBJYNB">
@@ -78,36 +83,253 @@
     <!-- slider controls -->
 </div>
 </div>
-
-<div id="ft">
 <h1 class="ft">Featured today</h1>
-<img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX210_CR0" />
+<div id="ft">
+ <img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX210_CR0" />
  <img src="https://m.media-amazon.com/images/M/MV5BMTg5NTA3NTg4NF5BMl5BanBnXkFtZTcwNTA0NDYzOA@@._V1_UX210_CR0" />
  <img src="https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX210_CR0" />
  <img src="https://m.media-amazon.com/images/M/MV5BYzQ2NjcyMmItYzBjMy00ZGRhLTliYmYtMGYyYjEzNWIyNTI4XkEyXkFqcGdeQXVyMTIzMzg0MTM2._V1_UX280_CR0" />
  <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY311_CR2" />
  <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY311_CR2" />  
 </div>
-<div id="wt">
-<h1 class="wt">What to watch</h1>
-<img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX210_CR0" />
- <img src="https://m.media-amazon.com/images/M/MV5BMTg5NTA3NTg4NF5BMl5BanBnXkFtZTcwNTA0NDYzOA@@._V1_UX210_CR0" />
- <img src="https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX210_CR0" />
- <img src="https://m.media-amazon.com/images/M/MV5BYzQ2NjcyMmItYzBjMy00ZGRhLTliYmYtMGYyYjEzNWIyNTI4XkEyXkFqcGdeQXVyMTIzMzg0MTM2._V1_UX280_CR0" />
- <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY311_CR2" />
- <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY311_CR2" />
+
+<div class="wt">
+<h1 id="wt">What to watch</h1>
+<a href="#">Browse our What to Watch Page ></a>
 </div>
-<h1 class="fyw1">From your Watchlist ></h1>
-<div class="fyw">
-  <a href="#"></a><i class="fas fa-bookmark"></i></a>
-  <h3>Sign in to access your Watchlist</h3>
-  <p>Save shows and movies to keep track of what you want to watch</p>
- <div class="si">
-  <a href="#">Sign in to IMDb</a>
+<br>
+<h2 id="int">In theaters</h2>
+<p style="color:white;margin-left: 100px;">Showtimes near you</p>
+<div class="top-picks">
+<div class="heading">
+ 
+</div>
+<div class="flexbox-container">
+   <div class="poster-card">
+   <div class="image" id="img12">		
+</div>
+    <div class="ratings">
+<div>
+    <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+</div>
+<div>
+  <span>8.4</span>
+</div>
+    </div>
+<div class="movie-title">
+  <a href="#">Serious MEN</a>
+</div>
+<div class="watchlist">
+ <div>
+   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
  </div>
+ <div>
+  <span>Watchlist</span>
+ </div>   
+</div>
+<div class="trailer-and-info">
+<div class="trailer">
+<div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+</div>
+<div>
+  <span>Trailer</span>
+</div>      
+</div>
+<div class="info">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+</div>
+</div>
+</div>
+<div class="poster-card">
+  <div class="image" id="img21">		
+</div>
+<div class="ratings">
+<div>
+  <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+</div>
+<div>
+  <span>6.1</span>
+</div>     
+</div>
+<div class="movie-title">
+  <a href="#">Trolls World Tours</a>
+</div>
+<div class="watchlist">
+<div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+</div>
+<div>
+  <span>Watchlist</span>
+</div>    
+</div>
+<div class="trailer-and-info">
+  <div class="trailer">
+<div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+</div>
+<div>
+  <span>Trailer</span>
+</div>       
+</div>
+<div class="info">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+</div>
+</div>
+</div>
+<div class="poster-card">
+  <div class="image" id="img31">		
+</div>
+<div class="ratings">
+<div>
+  <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+</div>
+<div>
+  <span>8.1</span>
+</div>     
+</div>
+<div class="movie-title">
+  <a href="#">Dilwale Dulhania Le Jayenge</a>
+</div>
+<div class="watchlist">
+<div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+</div>
+<div>
+  <span>Watchlist</span>
+</div>
+</div>
+<div class="trailer-and-info">
+<div class="trailer">
+<div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+</div>
+<div>
+  <span>Trailer</span>
+</div>      
+</div>
+<div class="info">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+</div>
+</div>
+    </div>    
+<div class="poster-card">
+ <div class="image" id="img41">		
+</div>
+<div class="ratings">
+  <div>
+  <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+</div>
+
+ <div>
+    <span>7.8</span>
+  </div>      
+</div>
+<div class="movie-title">
+  <a href="#">Veer-Zaara</a>
+</div>
+<div class="watchlist">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+  </div>
+<div>
+  <span>Watchlist</span>
+</div>
+</div>
+<div class="trailer-and-info">
+<div class="trailer">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+  </div>
+  <div>
+    <span>Trailer</span>
+  </div>
+</div>
+<div class="info">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+  </div>
+  </div>
+</div>
+<div class="poster-card">
+  <div class="image" id="img51">		
+</div>
+<div class="ratings">
+  <div>
+    <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+  </div>
+<div>
+  <span>5.5</span>
+</div>
+</div>
+<div class="movie-title">
+  <a href="#">EK Tha Tiger</a>
+</div>
+<div class="watchlist">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+</div>
+<div>
+  <span>Watchlist</span>
+</div>
+</div>
+<div class="trailer-and-info">
+<div class="trailer">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+</div>
+<div>
+  <span>Trailer</span>
+</div>
+</div>
+  <div class="info">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+  </div>
+</div>
+</div>
+<div class="poster-card">
+  <div class="image" id="img61">
+  </div>
+<div class="ratings">
+  <div>
+    <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+  </div>
+<div>
+  <span>7.3</span>
+</div>
+</div>
+<div class="movie-title">
+  <a href="#">Sir</a>
+</div>
+<div class="watchlist">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+  </div>
+<div>
+  <span>Watchlist</span>
+</div>
+</div>
+<div class="trailer-and-info">
+  <div class="trailer">
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+  </div>
+<div>
+  <span>Trailer</span>
+</div>
+</div>
+<div class="info">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div><h1 class="ff1">Fan favorites ></h1>
+  <p style="color:white;margin-left: 100px;">This week's top TV and Movies</p>
 </div>
 <div class="ff">
-  <h1 class="ff1">Fan favorites ></h1>
+
   <a href="#">
  <img src="https://m.media-amazon.com/images/M/MV5BOTc2ZTlmYmItMDBhYS00YmMzLWI4ZjAtMTI5YTBjOTFiMGEwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY207_CR2"/></a>
  <a href="#">
@@ -138,7 +360,121 @@
     <div><a href="#">
     <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY311_CR2" /></a></div>
 </div>
-  <script src="./movieweb.js"></script>
+<div class="sub-heading">
+  <h2>Born today</h2>
+  <p class="subtitle">People born on November 17</p>
+</div>
+<div class="card-container">
+  <div class="birthday-card">
+    <div class="birthday-img" id="image1">
+
+    </div>
+    <div class="birthday-preson">
+      <p>Rachel McAdams<br>42</p>
+    </div>
+  </div>
+  <div class="birthday-card">
+    <div class="birthday-img" id="image2">
+
+    </div>
+    <div class="birthday-preson">
+      <p>Tom Ellis<br>42</p>
+    </div>
+  </div>
+  <div class="birthday-card">
+    <div class="birthday-img" id="image3">
+
+    </div>
+    <div class="birthday-preson">
+      <p>Martin Scorsese<br>78</p>
+    </div>
+  </div>
+  <div class="birthday-card">
+    <div class="birthday-img" id="image4">
+
+    </div>
+    <div class="birthday-preson">
+      <p>Leslie Bibb<br>46</p>
+    </div>
+  </div>
+  <div class="birthday-card">
+    <div class="birthday-img" id="image5">
+
+    </div>
+    <div class="birthday-preson">
+      <p>Harry Lloyd<br>37</p>
+    </div>
+  </div>
+  <div class="birthday-card">
+    <div class="birthday-img" id="image6">
+
+    </div>
+    <div class="birthday-preson">
+      <p>Kara Hayward<br>22</p>
+    </div>
+  </div>
+</div>
+
+<div class="top-head">
+  <div class="rv">
+    <h2 id="rvh">Recently viewed</h2>
+  </div>
+  <div class="flexbox1-container">
+    <div class="poster1-card">
+      <div class="ipc-watchlist-ribbon ipc-focusable ipc-watchlist-ribbon--m ipc-watchlist-ribbon--baseAlt ipc-watchlist-ribbon--onImage ipc-poster__watchlist-ribbon" aria-label="add to watchlist" role="button" tabindex="0">
+      <div class="image" id="img1">		
+      </div>
+      </div>
+      <div class="movie-title">
+        <a href="#">The New Mutants</a>
+      </div>
+    </div>
+    <div class="poster1-card">
+      <div class="image" id="img2">		
+      </div>
+
+   
+      <div class="movie-title">
+        <a href="#">Rachel McAdams</a>
+      </div>
+    </div>
+
+    <div class="poster1-card">
+    <div class="image" id="img3">		
+      </div>
+      <div class="movie-title">
+        <a href="#">Mirzapur</a>
+      </div>
+    </div>
+
+    <div class="poster1-card">
+      <div class="image" id="img4">		
+      </div>
+      <div class="movie-title">
+        <a href="#">Fight Club</a>
+      </div>
+    </div>
+
+    <div class="poster1-card">
+      <div class="image" id="img5">		
+      </div>
+      <div class="movie-title">
+        <a href="#">The Haunting</a>
+      </div>
+    </div>
+
+    <div class="poster1-card">
+      <div class="image" id="img6">
+      </div>
+      <div class="movie-title">
+        <a href="#">#202-Pedro Pa..</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--JAVA SCRIPT SRC-->
+<script src="./movieweb.js"></script>
 <script src="./movieweb1.js"></script>
 </body>
 <footer>
@@ -146,11 +482,11 @@
   <a href="#">Get the MovieHub App</a>
 </div>
 <div class="foot1">
-  <a href="#"><i class="fas fa-facebook"></i></a>
-  <a href="#"><i class="fas fa-instagram"></i></a>
-  <a href="#"><i class="fas fa-twitch"></i></a>
-  <a href="#"><i class="fas fa-twitter"></i></a>
-  <a href="#"><i class="fas fa-youtube"></i></a>
+  <a href="#"><i class="fa fa-fw fa-facebook"></i> </a> 
+  <a href="#"><i class="fa fa-fw fa-instagram"></i> </a> 
+  <a href="#"><i class="fa fa-fw fa-twitch"></i></a>
+  <a href="#"><i class="fa fa-fw fa-twitter"></i> </a> 
+  <a href="#"><i class="fa fa-fw fa-youtube"></i> </a>
 </div>
 <div class ="foot2">
   <a href="#">Get the IMDb App</a>
@@ -170,8 +506,8 @@
   <a href="#">Interest-Based Ads</a>
 </div>
 <div class="footlast">
-  <a href="#"><i class="fas fa-amazon"></i></a>
-  <h2>an amazon company</h2>
+  <a href="#"><i class="fa fa-fw fa-amazon"></i> </a>
+  <h3>an amazon company</h3>
   <h3 class="cr">© 1990-2020 by IMDb.com, Inc.</h3>
 </div>
 </footer>
